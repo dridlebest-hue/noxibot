@@ -6,7 +6,7 @@ import json
 from typing import Optional
 from discord import app_commands
 from discord.ui import Button, View
-from keep_alive import keep_alive
+
 
 
 
@@ -193,5 +193,5 @@ async def info(interaction:discord.interactions):
     buttonjoin.callback = buttonjoin_callback
 
     await interaction.response.send_message(embed=embed,view=view)
-keep_alive()
+
 bot.run(os.getenv('DISCORD_TOKEN'))
